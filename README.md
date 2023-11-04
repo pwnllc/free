@@ -25,8 +25,8 @@ It goes like this:
 * A lot more
 
 ## What does an example look like?
-
-The example mdx file is available here.
+ 
+The example mdx file is titled "Example.mdx" in this repo.
 
 
 ## Contributers
