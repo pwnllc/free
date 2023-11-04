@@ -1,6 +1,8 @@
 
 ![pwn.guide's favicon](https://pwn.guide/favicon.ico)
 # pwn.guide's list of free tutorials!
+[![Uptime Badge](https://uptime.betterstack.com/status-badges/v1/monitor/wkbf.svg)](https://status.pwn.guide)
+
 **Do you like free tutorials? If you do, then please contribute to this repository with a tutorial in the .mdx format, and make it free and available to anyone!**
 
 ## Why?
