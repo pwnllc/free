@@ -43,3 +43,6 @@ The example mdx file is titled "Example.mdx" in this repo.
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 If you'd like to contribute, just push a tutorial you made!
+
+## License
+Do whatever the f*ck you like lol
