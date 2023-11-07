@@ -1,0 +1,75 @@
+---
+title: GPS Spoofing using a HackRF
+description: How to spoof your GPS signal using a HackRF One
+image: /images/tutorials/hackrf.jpeg
+date: "2023-11-07"
+authors:
+  - pwnguide
+---
+
+<Callout>
+  Legal Note: This is for educational purposes only!
+</Callout>
+
+Greetings fellow hackers!
+
+Today, we will show you how to spoof your location using a HackRF One. <b>You will NEED a TCXO Clock for this to work.</b>
+
+> Install the gps-sdr-sim program,
+> Compile it using gcc,
+> Get the satellite files,
+> Run the program,
+> Transfer it to the HackRF,
+> Go to Antarctica!
+
+## Installing The gps-sdr-sim Program
+
+If you have git installed on your machine, then you can clone it using:
+```bash
+git clone https://github.com/osqzss/gps-sdr-sim.git
+```
+Or by going to https://github.com/osqzss/gps-sdr-sim and downloading a zip and then extracting it.
+
+Don't forget to get cd (get into the directory) before going to the next step!
+
+### Compile it
+
+Before you run the program, you have to compile it. You can do this by running:
+```bash
+gcc gpssim.c -lm -O3 -o gps-sdr-sim -DUSER_MOTION_SIZE=4000
+```
+
+Now comes the annoying part...
+
+## Get The Satellite Files
+
+To get the satellite files you sadly need to create an account on the NASA's website.
+
+- Go to https://cddis.nasa.gov/archive/gnss/data/daily/2023/brdc/
+- Find the latest file
+- Download it
+- And finally, extract it.
+
+## Choose Where You Want To Be.
+In my case, I want to be in Antarctica.
+To do that, I will go to my favourite online map (like Google Maps),
+Right click on the place where you want to be, and click on it's coordinates (see the image)
+<Image
+  src="/images/tutorials/maps-coordinates.png"
+  width="718"
+  height="404"
+  alt="Image"
+/>
+
+## Run The Program
+Now you will need to create the .bin file with the gps-sdr-sim. Here's an example:
+```bash
+./gps-sdr-sim -b 8 -e brdc0010.22n -l -66.32458095460932, -62.33976614456196, 100
+```
+This will create a file named gpssim.bin.
+
+## Transfer to The HackRF to Transmit
+```bash
+sudo hackrf_transfer -t gpssim.bin -f 1575420000 -s 2600000 -a 1 -x 0
+```
+Wooooo! You are now spoofing your location using a HackRF. If it doesn't work, then it may take about 3-5min to get recognised by your phone. Still not working? Because this tutorial is free, you can get community support by opening an issue here: https://github.com/pwnguide/free
