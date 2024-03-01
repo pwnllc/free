@@ -31,18 +31,8 @@ It goes like this:
 The example mdx file is titled "Example.mdx" in this repo.
 
 
-## Contributers
-
-<!-- ALL-CONTRIBUTORS-LIST:START -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-If you'd like to contribute, just push a tutorial you made!
+## Contributors
+Lewis Wild
 
 ## License
 Do whatever the f*ck you like lol
