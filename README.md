@@ -32,8 +32,8 @@ The example mdx file is titled "Example.mdx" in this repo.
 
 
 ## Contributors
-Lewis Wild
-Anna Babichenko :P
+- Lewis Wild
+- Anna Babichenko :P
 
 ## License
 Do whatever the f*ck you like lol
